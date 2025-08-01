@@ -1,11 +1,14 @@
-# Imagen oficial de PHP con Apache
 FROM php:8.2-apache
 
-# Copiamos todos los archivos al directorio de Apache
+# Instalar mysqli
+RUN docker-php-ext-install mysqli
+
+# Copiar el código al directorio web
 COPY . /var/www/html/
 
-# Exponemos el puerto 10000 (Render lo usa por defecto)
-EXPOSE 10000
+# Exponer el puerto 80 (Apache)
+EXPOSE 80
 
-# Comando para iniciar el servidor PHP integrado
-CMD ["php", "-S", "0.0.0.0:10000", "-t", "/var/www/html"]
+# El CMD por defecto ya arranca Apache, no hace falta cambiarlo
+# Si quieres puedes dejarlo explícito:
+CMD ["apache2-foreground"]

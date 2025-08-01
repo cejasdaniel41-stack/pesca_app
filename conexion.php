@@ -1,10 +1,11 @@
 <?php
-$host = "localhost";
-$user = "root"; // tu usuario de MySQL
-$pass = ""; // tu contraseña de MySQL
-$db = "pesca_db"; // nombre de la base de datos
+$host = "nozomi.proxy.rlwy.net";
+$usuario = "root";
+$password = "qbFCEMSZrUVkuJHoQzAnDZQMvaNBvAuA";
+$bd = "railway";
+$puerto = 55292; // Ej: 3306
 
-$conexion = new mysqli($host, $user, $pass, $db);
+$conexion = new mysqli($host, $usuario, $password, $bd, $puerto);
 
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);

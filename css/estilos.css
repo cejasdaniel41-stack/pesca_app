@@ -1,0 +1,91 @@
+/* 🔹 Colores principales */
+:root {
+  --color-fondo: #e0f7fa;
+  --color-primario: #0277bd;
+  --color-secundario: #01579b;
+  --color-boton: #0288d1;
+  --color-boton-hover: #01579b;
+  --color-texto: #ffffff;
+  --sombra: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Reset básico */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--color-fondo);
+  text-align: center;
+}
+
+/* 🔹 Header */
+.header {
+  background: var(--color-primario);
+  color: var(--color-texto);
+  padding: 15px;
+  box-shadow: var(--sombra);
+}
+
+.logo {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  margin: 10px 0;
+}
+
+/* 🔹 Botones generales */
+button, .btn {
+  display: block;
+  width: 90%;
+  max-width: 350px;
+  margin: 8px auto;
+  padding: 14px;
+  font-size: 18px;
+  background: var(--color-boton);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+button:hover, .btn:hover {
+  background: var(--color-boton-hover);
+}
+
+/* 🔹 Contenedores */
+.container {
+  max-width: 400px;
+  margin: 30px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+/* 🔹 Formularios */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* 🔹 Footer */
+footer {
+  background: var(--color-secundario);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'conexion.php';
+echo "✅ Render está funcionando con PHP!";
 
 $query = "SELECT s.*, u.email 
           FROM salidas s 
